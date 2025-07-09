@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ServiceCategory {
   id: string;
@@ -80,7 +81,7 @@ const featuredProjects: AutomationProject[] = [
       'Reduced operational costs',
       'Improved customer satisfaction'
     ],
-    image: '/images/whatsapp-ai.jpg',
+    image: '/images/whatsapp-automation.jpeg',
     testimonial: {
       content: "This WhatsApp automation has transformed our customer service. Response times are down 80% and our team can focus on complex queries.",
       author: "Sarah Johnson",
@@ -152,7 +153,7 @@ const automationProjects: AutomationProject[] = [
       'Reduced operational costs',
       'Improved customer satisfaction'
     ],
-    image: '/images/whatsapp-ai.jpg',
+    image: '/images/whatsapp-automation.jpeg',
     testimonial: {
       content: "This WhatsApp automation has transformed our customer service. Response times are down 80% and our team can focus on complex queries.",
       author: "Sarah Johnson",
@@ -267,9 +268,15 @@ const Projects = () => {
             return (
               <Card key={project.id} className="overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative h-64 md:h-auto">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-blue-100"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
+                                    <div className="relative h-64 md:h-auto min-h-[400px]">
+                    <Image 
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                    <div className="relative h-full flex flex-col justify-end p-8 text-white">
                       <div className="text-center">
                         <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 ${category?.color} bg-opacity-30`}>
                           {category?.name}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 const ForBusinesses = () => {
   return (
@@ -48,9 +49,13 @@ const ForBusinesses = () => {
               </div>
             </CardContent>
             <div className="p-8 bg-black/20 h-full flex items-center justify-center min-h-[300px]">
-              <div className="w-full h-64 border-2 border-dashed border-primary-foreground/30 rounded-lg flex items-center justify-center">
-                <p className="text-primary-foreground/50 text-center">[Image: Diagram of WhatsApp AI flow goes here]</p>
-              </div>
+              <Image
+                  src="/images/whatsapp-automation.jpeg"
+                  alt="WhatsApp AI Automation Flow"
+                  width={500}
+                  height={300}
+                  className="rounded-lg shadow-2xl object-cover"
+                />
             </div>
           </div>
         </Card>
