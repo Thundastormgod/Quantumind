@@ -1,14 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
-  functions = ".next/functions"
+  publish = "out"
 
 [build.environment]
-  NEXT_USE_NETLIFY_EDGE = "false"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    functions = ".next/functions"
-    publish = ".next"
-    buildCommand = "npm run build"
+  NODE_VERSION = "18"
