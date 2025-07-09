@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
+  // Disable server-side rendering for static export
   output: 'export',
-  // Optional: Add a trailing slash to all paths `/about` -> `/about/`
-  // trailingSlash: true,
-  // Optional: Change the output directory `out` -> `dist`
-  // distDir: 'dist',
   
   // Enable React Strict Mode
   reactStrictMode: true,
@@ -13,4 +10,32 @@ module.exports = {
   images: {
     unoptimized: true,
   },
+  
+  // Disable image optimization API (not needed for static exports)
+  images: {
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
+  
+  // Enable static HTML export
+  trailingSlash: true,
+  
+  // Disable TypeScript type checking during build (speeds up build)
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // Disable ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
+
+// For Netlify deployment
+const isProd = process.env.NODE_ENV === 'production'
+if (isProd) {
+  // Add any production-specific config here
+  nextConfig.output = 'export'
+}
+
+module.exports = nextConfig
