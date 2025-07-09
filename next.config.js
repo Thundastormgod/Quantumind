@@ -11,12 +11,6 @@ const nextConfig = {
     unoptimized: true,
   },
   
-  // Disable image optimization API (not needed for static exports)
-  images: {
-    loader: 'custom',
-    loaderFile: './image-loader.js',
-  },
-  
   // Enable static HTML export
   trailingSlash: true,
   
@@ -38,4 +32,4 @@ if (isProd) {
   nextConfig.output = 'export'
 }
 
-module.exports = nextConfig
+export default nextConfig
