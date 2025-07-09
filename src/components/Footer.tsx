@@ -21,8 +21,8 @@ const Footer = () => {
             <Link href="/for-individuals" className="text-muted-foreground hover:text-primary transition-colors">
               For Individuals
             </Link>
-            <Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-              Projects
+            <Link href="/solutions" className="text-muted-foreground hover:text-primary transition-colors">
+              Solutions
             </Link>
             <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About Us

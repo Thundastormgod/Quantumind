@@ -83,12 +83,12 @@ const HomePage = () => {
         {/* Customer Reviews */}
         <CustomerReviews type="mixed" />
 
-        {/* Projects Showcase Teaser */}
+        {/* Solutions Showcase Teaser */}
         <section className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">See Our Work in Action</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore real AI automation projects we've built for clients across industries.
+              Explore real AI automation solutions we've built for clients across industries.
             </p>
           </div>
           
@@ -103,7 +103,7 @@ const HomePage = () => {
                   From fraud detection systems saving £2M+ annually to supply chain automation reducing costs by 40%, discover the transformative AI solutions we've delivered.
                 </p>
                 <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  <Link href="/projects">View Our Projects</Link>
+                  <Link href="/solutions">View Our Solutions</Link>
                 </Button>
               </CardContent>
             </Card>

@@ -44,12 +44,12 @@ const Header = () => {
             For Individuals
           </Link>
           <Link 
-            href="/projects" 
+            href="/solutions" 
             className={`text-sm font-medium transition-colors hover:text-primary ${
-              isActive('/projects') ? 'text-primary' : 'text-muted-foreground'
+              isActive('/solutions') ? 'text-primary' : 'text-muted-foreground'
             }`}
           >
-            Projects
+            Solutions
           </Link>
           <Link 
             href="/about" 
